@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel = "stylesheet" href = "style.css">
+        <style>
+            .part1 {
+                display: flex;
+                background-color: whitesmoke;
+                margin: 2em;
+                padding: 1em;
+                border-radius: 1em;
+            }
+
+            .part2 {
+                display: flex;
+                background-color: whitesmoke;
+                margin: 2em;
+                padding: 1em;
+                border-radius: 1em;
+                flex-wrap: wrap;
+            }
+
+            #address {margin: 1em;}
+
+            #links {margin: 1em;}
+
+            .part2 iframe {margin: 1em; order: 2; margin: 0 auto;}
+
+            #form {margin: 1em; order: 1;}
+
+            #form label, #form p {font-weight: bold;}
+        </style>
+    </head>
+
+    <body>
+
+        <nav>
+            <a href = "index.html">Home</a> <span>|</span> 
+            <a href = "skills.html">Skills</a> <span>|</span> 
+            <a href = "contact.html">Contact</a>
+        </nav>
+        
+        <h1>Contact</h1>
+
+        <div class = "part1">
+
+            <div id = "address">
+
+                <p>
+                    Tyler Katz<br>Syracuse University<br>900 South Crouse Ave<br>Syracuse, NY 13210
+                </p>
+
+            </div>
+
+            <div id = "links">
+
+                <p>
+                    <a href="mailto:tmkatz@syr.edu">Tyler Katz Email</a>
+                </p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/tylerkatz1/" target = "_blank"><img src = "../images/LI-In-Bug-rescaled.png" alt = "LinkedIn Logo">My LinkedIn Profile</a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class = "part2">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5832.304703582495!2d-76.13594292408746!3d43.03822589198841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fca155555%3A0xc1c69e4f641652c1!2sSyracuse%20University%20School%20of%20Information%20Studies%20(iSchool)!5e0!3m2!1sen!2sus!4v1757534707251!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            <div id = "form">
+                <h1>Question Form</h1>
+
+                <form action = "https://formspree.io/f/mblavqqq" method = "post">
+
+                    <label for = "fname">First Name: </label><br>
+                    <input type = "text" id = "fname" name = "fname">
+
+                    <br><br>
+
+                    <label for = "lname">Last Name: </label><br>
+                    <input type = "text" id = "lname" name = "lname">
+
+                    <br><br>
+                    
+                    <p>Have you contacted me before?</p>
+                    <input type = "radio" id = "response1" name = "response" value = "Yes">
+                    <label for = "response1" style = "font-weight: normal;">Yes</label>
+                    <input type = "radio" id = "response2" name = "response" value = "No">
+                    <label for = "response2" style = "font-weight: normal;">No</label>
+
+                    <br><br>
+
+                    <label for = "question">Question: </label><br>
+                    <textarea id = "question" name = "question" rows = "6"></textarea>
+
+                    <br><br>
+
+                    <input type = "submit" value = "Send Form">
+
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
