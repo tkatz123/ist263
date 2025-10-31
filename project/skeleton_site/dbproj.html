@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Restuarant SQL DB</title>
+    </head>
+
+    <body>
+        <header>
+
+            <div class = "title">
+
+                <p>Tyler Katz's Portfolio</p>
+            
+            </div>
+
+            <nav>
+
+                <a href = "index.html">Home</a>
+                <a href = #toolsUsed>Tools Used</a>
+                <a href = #datasetMethod>Dataset/Methodology</a>
+                <a href = #results>Results</a>
+                <a href = #nextSteps>Next Steps</a>
+
+            </nav>
+
+        </header>
+
+        <hr>
+
+        <section id = "title">
+
+        <h1>Restaurant SQL Database</h1>
+
+        <p>
+            This project demonstrates the full creation of a normalized SQL database from CSV files. Using SQLite, I built a restaurant analytics database from the ground up — from ERD design to table creation, data population via Python, and advanced SQL queries analyzing customer behavior, revenue trends, and restaurant performance.
+        </p>
+
+        </section>
+
+        <hr>
+
+        <section id = "toolsUsed">
+
+            <h1>Tools Used</h1>
+
+            <div id = "languages">
+
+                <h3>SQL Engine</h3>
+
+                <p>SQLite</p>
+
+            </div>
+
+            <div id = "libraries">
+
+                <h3>Tools</h3>
+
+                <p>DB Browser for SQLite</p>
+
+                <p>Python</p>
+
+                <p><a href = "https://app.diagrams.net/">draw.io</a> (Conceptual ERD)</p>
+
+                <p><a href = "https://vertabelo.com/">Vertabelo</a> (Physical ERD)</p>
+                
+            </div>
+
+            <div id = "mlTechniques">
+
+                <h3>SQL Features</h3>
+
+                <p>Joins</p>
+
+                <p>Aggregation</p>
+
+                <p>Views</p>
+
+                <p>CTEs</p>
+
+                <p>Insert Scripts</p>
+
+                <p>Constraints</p>
+                
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "datasetMethod">
+
+            <div id = "dataset">
+
+                <h1>Dataset</h1>
+
+                <p>
+                    Sourced from <a href = "https://www.kaggle.com/datasets/vainero/restaurants-customers-orders-dataset/data" target = "_blank">Kaggle</a> <br> The dataset includes 10 CSV files detailing members, restaurants, meals, orders, payments, etc.
+                </p>
+
+            </div>
+
+            <div id = "methodology">
+
+                <h1>Methodology</h1>
+
+                <ol>
+
+                    <li>
+                        Schema Design 
+
+                        <ul>
+
+                            <li>Created a conceptual ERD in <a href = "https://app.diagrams.net/">draw.io</a></li>
+
+                            <li>Built a physical ERD in <a href = "https://vertabelo.com/">Vertabelo</a>, defining keys, types, constraints, and relationships</li>
+
+                            <li>Resolved many-to-many relationships and set up foreign key constraints</li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Database Construction 
+                        
+                        <ul>
+
+                            <li>
+                                Generated SQL scripts to create and drop tables in dependency order
+                            </li>
+
+                            <li>
+                                Used Python to convert CSVs into INSERT statements (workaround for DB Browser limitations)
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Query Development 
+                        
+                        <ul>
+
+                            <li>
+                                Wrote themed SQL scripts to explore and analyze key aspects of the restaurant business:
+                                
+                                <ul>
+
+                                    <li>
+                                        customer_behavior.sql – member activity and spending
+                                    </li>
+
+                                    <li>
+                                        meal_popularity.sql – top-selling items and category insights
+                                    </li>
+
+                                    <li>
+                                        restaurant_performance.sql – metrics per restaurant
+                                    </li>
+
+                                    <li>
+                                        monthly_trends.sql – seasonal business trends
+                                    </li>
+
+                                    <li>
+                                        revenue_analysis.sql – revenue drivers and order value
+                                    </li>
+
+                                    <li>
+                                        views_and_ctes.sql – modular views and CTE examples
+                                    </li>
+
+                                    <li>
+                                        data_validation.sql – full-table joins for schema integrity checks
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "results">
+
+            <h1>Results</h1>
+
+            <div id = "resultsBullets">
+
+                <ul>
+
+                    <li>
+                        Successfully created a fully normalized SQL database from scratch
+                    </li>
+
+                    <li>
+                        Joined and validated data from 10 tables using SQL
+                    </li>
+
+                    <li>
+                        Produced modular, reusable SQL scripts to answer business questions across multiple domains
+                    </li>
+
+                    <li>
+                        Used CTEs and views to streamline complex queries and improve clarity
+                    </li>
+
+                    <li>
+                        Demonstrated expertise in SQL data modeling, ingestion, and querying in a local environment without a hosted database
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id = "resultsImages">
+
+                <figure>
+
+                    <img src = "../images/SQL_DB_project/Conceptual ERD.jpg" alt = "Conceptual ERD">
+
+                    <figcaption>Conceptual ERD</figcaption>
+                </figure>
+
+                <figure>
+
+                    <img src = "../images/SQL_DB_project/physical ERD.jpg" alt = "Clustering PCA visualization">
+
+                    <figcaption>Physical ERD</figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = nextSteps>
+
+            <div id = "nextSteps">
+
+                <h1>Next Steps</h1>
+
+                <ul>
+
+                    <li>
+                        Build a Streamlit or Tableau dashboard that connects to the SQLite database for real-time querying and visualization
+                    </li>
+
+                    <li>
+                        Integrate user input forms to allow for dynamic filtering of results (e.g., revenue by restaurant or time frame)
+                    </li>
+
+                    <li>
+                        Explore indexing and query optimization for faster performance on larger datasets
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </body>
+
+</html>
