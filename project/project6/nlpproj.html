@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fake News Detection</title>
+    </head>
+
+    <body>
+        <header>
+
+            <div class = "title">
+
+                <p>Tyler Katz's Portfolio</p>
+            
+            </div>
+
+            <nav>
+
+                <a href = "index.html">Home</a>
+                <a href = #toolsUsed>Tools Used</a>
+                <a href = #datasetMethod>Dataset/Methodology</a>
+                <a href = #results>Results</a>
+                <a href = #highlightsNextSteps>Highlights/Next Steps</a>
+                <a href = #app>Streamlit App</a>
+                <a href = #demoVid>Demo Video</a>
+
+            </nav>
+        </header>
+
+        <hr>
+
+        <section id = "title">
+
+        <h1>Fake News Detection Using NLP</h1>
+
+        <p>
+            In an age of misinformation, I built an NLP-based machine learning pipeline to classify news articles as real or fake with high accuracy. The project uses logistic regression, random forest, and a meta-classifier to combine model outputs and generate robust, confidence-scored predictions. It also features a Streamlit app that allows users to input articles for real-time analysis.
+        </p>
+
+        </section>
+
+        <hr>
+
+        <section id = "toolsUsed">
+
+            <h1>Tools Used</h1>
+
+            <div id = "languages">
+
+                <h3>Language</h3>
+
+                <p>Python 3.11.0</p>
+
+            </div>
+
+            <div id = "libraries">
+
+                <h3>Libraries</h3>
+
+                <p>scikit-learn</p>
+
+                <p>nltk</p>
+
+                <p>pandas</p>
+
+                <p>seaborn</p>
+
+                <p>wordcloud</p>
+
+                <p>swifter</p>
+
+                <p>joblib</p>
+                
+            </div>
+
+            <div id = "mlTechniques">
+
+                <h3>ML Techniques</h3>
+
+                <p>TF-IDF</p>
+
+                <p>Sentiment Analysis (VADER)</p>
+
+                <p>Meta Classification</p>
+
+                <p>Hyperparameter Tuning (GridSearchCV)</p>
+                
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "datasetMethod">
+
+            <div id = "dataset">
+
+                <h1>Dataset</h1>
+
+                <p>
+                    Sourced from <a href = "https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification" target = "_blank">Kaggle</a> <br> The dataset includes 72,134 labled articles (real/fake) aggregated by a team of researchers from mutliple sources including Reuters and BuzzFeed.
+                </p>
+            </div>
+
+            <div id = "methodology">
+
+                <h1>Methodology</h1>
+
+                <ol>
+
+                    <li>
+                        Exploratory Analysis — Visualized top keywords and sentiment differences between real and fake news
+                    </li>
+
+                    <li>
+                        Text Preprocessing — Cleaned and normalized text, removed noise, and engineered sentiment features
+                    </li>
+
+                    <li>
+                        Feature Engineering — Combined TF-IDF vectorized text with sentiment polarity scores
+                    </li>
+
+                    <li>
+                        Modeling:
+
+                        <ul>
+
+                            <li>
+                                Trained Logistic Regression and Random Forest classifiers
+                            </li>
+
+                            <li>
+                                Developed a meta-classifier to combine their output probabilities using logistic regression
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Evaluation — Measured performance using accuracy, precision, recall, F1-score, and calibration plots
+                    </li>
+
+                    <li>
+                        Deployment — Built a Streamlit interface to test articles in real time and explore model predictions
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "results">
+
+            <h1>Results</h1>
+
+            <div id = "resultsTable">
+
+                <table>
+
+                    <tr>
+
+                        <th>Model</th>
+
+                        <th>Accuracy</th>
+
+                        <th>F1 (Fake)</th>
+
+                        <th>F1 (Real)</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Logistic Regression</td>
+
+                        <td>94.87%</td>
+
+                        <td>95.00%</td>
+
+                        <td>95.00%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Random Forest Classifier</td>
+
+                        <td>92.42%</td>
+
+                        <td>93.00%</td>
+
+                        <td>93.00%</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Meta Classifier</td>
+
+                        <td>95.51%</td>
+
+                        <td>96.00%</td>
+
+                        <td>96.00%</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div id = "resultsImages">
+
+                <img src = "../images/NLP_project/ROC_Curve-Logistic_Regression.png" alt = "Logistic Regression ROC Curve">
+
+                <img src = "../images/NLP_project/Roc_Curve-Random_Forest.png" alt = "Random Forest ROC Curve">
+
+                <img src = "../images/NLP_project/Precision_Recall_Curve-meta_classifier.png" alt = "Meta Classifier Precision Recall Curve">
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = highlightsNextSteps>
+
+            <div id = "highlights">
+
+                <h1>Highlights</h1>
+
+                <ul>
+                    <li>
+                        Used swifter to dramatically speed up sentiment feature generation across 70k+ articles
+                    </li>
+
+                    <li>
+                        Tuned model hyperparameters with GridSearchCV to reduce overfitting
+                    </li>
+
+                    <li>
+                        Built an intuitive streamlit interface where users can:
+
+                        <ul>
+
+                            <li>
+                                Paste article text to get real/fake predictions + confidence scores
+                            </li>
+
+                            <li>
+                                Upload their Kaggle API key to download and explore the dataset themselves
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id = "nextSteps">
+
+                <h1>Next Steps</h1>
+
+                <ul>
+
+                    <li>
+                        Expand training data using live web scraping
+                    </li>
+
+                    <li>
+                        Build a browser extension to detect misinformation in real time as users browse
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "app">
+
+            <h1>Streamlit App</h1>
+
+            <p>Try out the Streamlit app for this project here!</p>
+
+            <iframe
+            src="https://tyler-katz-fake-news-detection.streamlit.app?embed=true"
+            style="height: 650px; width: 50%;"
+            ></iframe>
+
+        </section>
+
+        <hr>
+
+        <section id = "demoVid">
+
+            <h1>Video Demo</h1>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZRTYQSKLz8s?si=bwoSERnaDORz-AXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </section>
+
+    </body>
+
+</html>

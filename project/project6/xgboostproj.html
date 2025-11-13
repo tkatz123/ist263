@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Sales Forecasting</title>
+    </head>
+
+    <body>
+        <header>
+
+            <div class = "title">
+
+                <p>Tyler Katz's Portfolio</p>
+            
+            </div>
+
+            <nav>
+
+                <a href = "index.html">Home</a>
+                <a href = #toolsUsed>Tools Used</a>
+                <a href = #datasetMethod>Dataset/Methodology</a>
+                <a href = #results>Results</a>
+                <a href = #highlightsNextSteps>Highlights/Next Steps</a>
+                <a href = #app>Streamlit App</a>
+                <a href = #demoVid>Demo Video</a>
+
+            </nav>
+        </header>
+
+        <hr>
+
+        <section id = "title">
+
+        <h1>Sales Forceasting Using XGboost</h1>
+
+        <p>
+            This project tackles time-series sales forecasting for over 1,100 Rossmann stores using an XGBoost model in R. It features extensive feature engineering, hyperparameter tuning, time-series validation, and an interactive Shiny dashboard for exploring predictions by store and date range.
+        </p>
+
+        </section>
+
+        <hr>
+
+        <section id = "toolsUsed">
+
+            <h1>Tools Used</h1>
+
+            <div id = "languages">
+
+                <h3>Language</h3>
+
+                <p>R 4.4.2</p>
+
+            </div>
+
+            <div id = "libraries">
+
+                <h3>Libraries</h3>
+
+                <p>tidyverse</p>
+
+                <p>lubridate</p>
+
+                <p>janitor</p>
+
+                <p>zoo</p>
+
+                <p>ggplot2</p>
+
+                <p>skimr</p>
+
+                <p>plotly</p>
+
+                <p>XGBoost</p>
+
+                <p>Metrics</p>
+
+                <p>Shiny</p>
+                
+            </div>
+
+            <div id = "mlTechniques">
+
+                <h3>ML Techniques</h3>
+
+                <p>Lag/Rolling Features</p>
+
+                <p>Calendar-Based Features</p>
+
+                <p>Gradient Boosting</p>
+
+                <p>Time-Series Cross-Validation</p>
+
+                <p>RMSE/MAE Evaliation</p>
+                
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "datasetMethod">
+
+            <div id = "dataset">
+
+                <h1>Dataset</h1>
+
+                <p>
+                    Sourced from <a href = "https://www.kaggle.com/competitions/rossmann-store-sales/data" target = "_blank">Kaggle</a> <br> The dataset includes 1,017,209 rows across 18 variables, and sales data for 1,115 Rossmann stores from January 2013 to July 2015
+                </p>
+
+            </div>
+
+            <div id = "methodology">
+
+                <h1>Methodology</h1>
+
+                <ol>
+
+                    <li>
+                        Data Merging & Cleaning - Joined sales and store data; imputed missing values for competition and promo indicators
+                    </li>
+
+                    <li>
+                        Feature Engineering - Created 15 new variables:
+                        
+                        <ul>
+
+                            <li>
+                                Calendar: Year, Month, Day, Week, IsWeekend, IsMonthStart, IsMonthEnd
+                            </li>
+
+                            <li>
+                                Business Status: IsClosedDay, PromoActive, CompetitionActive
+                            </li>
+
+                            <li>
+                                Lag & Rolling Sales: Sales_lag_1, Sales_lag_7, Sales_lag_14, Sales_roll_mean_7, Sales_roll_mean_14
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        EDA - Used skimr, ggplot2, and plotly to visualize:
+                        
+                        <ul>
+
+                            <li>
+                                Sales trends by date, promo status, day of week, holidays, store type, and more
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Modeling - Trained an XGBoost regressor using a time-based train/test split (last 6 weeks held out)
+                    </li>
+
+                    <li>
+                        Tuning - Ran multiple models with different parameters to find the optimal configuration
+                    </li>
+
+                    <li>
+                        Evaluation - Analyzed residuals, plotted predictions vs. actuals, and confirmed no overfitting via RMSE/MAE on test/train
+                    </li>
+
+                    <li>
+                        Deployment - Created a Shiny app that allows users to:
+
+                        <ul>
+                            <li>
+                                Select a store (1–1115) and forecast window (7–90 days)
+                            </li>
+
+                            <li>
+                                Visualize predicted vs. actual sales
+                            </li>
+
+                            <li>
+                               View numeric accuracy metrics 
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "results">
+
+            <h1>Results</h1>
+
+            <div id = "resultsTable">
+
+                <table>
+
+                    <tr>
+
+                        <th>Metric</th>
+
+                        <th>Baseline XGBoost</th>
+
+                        <th>Tuned XGBoost</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>RMSE</td>
+
+                        <td>1433.87</td>
+
+                        <td>663.47</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>MAE</td>
+
+                        <td>1081.46</td>
+
+                        <td>438.57</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div id = "resultsImages">
+
+                <img src = "../images/Sales_forecasting_project/predicted_vs_actual_scatter_plot.png" alt = "Model predicted vs actual scatter plot">
+
+                <img src = "../images/Sales_forecasting_project/total_sales_actual_vs_predicted.png" alt = "Model total sales actual vs predicted plot">
+
+                <figure>
+
+                    <figcaption>Feature Importance Plot</figcaption>
+
+                    <img src = "../images/Sales_forecasting_project/Feature_importance_plot.png" alt = "Feature importance plot">
+
+                </figure>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = highlightsNextSteps>
+
+            <div id = "highlights">
+
+                <h1>Highlights</h1>
+
+                <ul>
+                    <li>
+                        Dramatically improved model accuracy through feature engineering and parameter tuning
+                    </li>
+
+                    <li>
+                        Built my first Shiny app from scratch to showcase interactive sales forecasting
+                    </li>
+
+                    <li>
+                        Learned to apply lagged and rolling windows for modeling short-term sales patterns
+                    </li>
+
+                    <li>
+                        Designed a full modeling pipeline from raw CSVs to app deployment
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id = "nextSteps">
+
+                <h1>Next Steps</h1>
+
+                <ul>
+
+                    <li>
+                        Build a more advanced lag pipeline for predicting into the future
+                    </li>
+
+                    <li>
+                        Introduce holiday-based features to capture event-based seasonality
+                    </li>
+
+                    <li>
+                        Add store geographic data to incorporate spatial context
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "app">
+
+            <h1>Streamlit App</h1>
+
+            <p>Try out the Shiny app for this project here!</p>
+
+            <iframe
+            src="https://tkatz.shinyapps.io/Sales_Forecasting_App/"
+            style="height: 650px; width: 70%;"
+            ></iframe>
+
+        </section>
+
+        <hr>
+
+        <section id = "demoVid">
+
+            <h1>Video Demo</h1>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bPQ7tdmtjLM?si=gOM4SmaZChCQ9dJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </section>
+
+    </body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Customer Segmentation</title>
+    </head>
+
+    <body>
+        <header>
+
+            <div class = "title">
+
+                <p>Tyler Katz's Portfolio</p>
+            
+            </div>
+
+            <nav>
+
+                <a href = "index.html">Home</a>
+                <a href = #toolsUsed>Tools Used</a>
+                <a href = #datasetMethod>Dataset/Methodology</a>
+                <a href = #results>Results</a>
+                <a href = #highlightsNextSteps>Highlights/Next Steps</a>
+
+            </nav>
+
+        </header>
+
+        <hr>
+
+        <section id = "title">
+
+        <h1>Customer Segmentation Using K-Means Clustering via PySpark</h1>
+
+        <p>
+            This project, developed as a final assignment for IST 418: Big Data Analytics at Syracuse University, focuses on unsupervised machine learning for retail marketing strategy. Using PySpark’s MLlib, I implemented K-Means clustering on a customer dataset to uncover behavioral patterns and build three recommendation systems for targeted outreach and inventory optimization.
+        </p>
+
+        </section>
+
+        <hr>
+
+        <section id = "toolsUsed">
+
+            <h1>Tools Used</h1>
+
+            <div id = "languages">
+
+                <h3>Language</h3>
+
+                <p>Python 3.11.0</p>
+
+            </div>
+
+            <div id = "libraries">
+
+                <h3>Libraries</h3>
+
+                <p>PySpark</p>
+
+                <p>Spark's MLlib</p>
+
+                <p>pandas</p>
+
+                <p>matplotlib</p>
+
+                <p>seaborn</p>
+                
+            </div>
+
+            <div id = "mlTechniques">
+
+                <h3>ML Techniques</h3>
+
+                <p>K-Means Clustering</p>
+
+                <p>FP-Growth (Association Rule Mining)</p>
+
+                <p>Principal Component Analysis (PCA)</p>
+
+                <p>silhouette Scoring</p>
+                
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "datasetMethod">
+
+            <div id = "dataset">
+
+                <h1>Dataset</h1>
+
+                <p>
+                    Sourced from <a href = "https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis" target = "_blank">Kaggle</a> <br> The dataset includes 2,240 customer records with 29 variables. The data was collected from a Portuguese retail campaign containing demographics, spending, deal acceptance, and loyalty history
+                </p>
+
+            </div>
+
+            <div id = "methodology">
+
+                <h1>Methodology</h1>
+
+                <ol>
+
+                    <li>
+                        Data Cleaning & Feature Engineering
+
+                        <ul>
+
+                            <li>Dropped null Income entries</li>
+
+                            <li>Engineered variables like age, total_spent, total_campaigns_accepted, and days_enlisted</li>
+
+                            <li>Consolidated teen/child columns and standardized marital_status and education labels</li>
+
+                            <li>Created age_group and promo/loyalty indicators</li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Exploratory Data Analysis
+                        
+                        <ul>
+
+                            <li>
+                                Converted Spark DataFrame to pandas for visualization
+                            </li>
+
+                            <li>
+                                Plotted spending trends by education, age, marital status, and loyalty duration
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Vectorization & Pipeline Setup
+                        
+                        <ul>
+
+                            <li>
+                                Scaled numerical features, encoded categorical features
+                            </li>
+
+                            <li>
+                                Built a reusable transformation pipeline using PySpark’s ML tools
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        K-Means Clustering
+
+                        <ul>
+
+                            <li>
+                                Used elbow method, silhouette scores, and PCA to determine optimal k
+                            </li>
+
+                            <li>
+                                Chose k = 3 based on clarity of separation and a silhouette score of 0.3136
+                            </li>
+
+                            <li>
+                                Profiled each cluster using PySpark SQL to identify patterns
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Recommendation Systems
+
+                        <ul>
+                            <li>
+                                FP-Growth Association Rules: Identified item combinations frequently bought together
+                            </li>
+
+                            <li>
+                                Hybrid Recommender: Merged individual purchase history and cluster preferences for personalized suggestions
+                            </li>
+
+                            <li>
+                               Manual Deal Strategy: Created custom promotions based on cluster characteristics and retail industry practices
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = "results">
+
+            <h1>Results</h1>
+
+            <div id = "resultsTable">
+
+                <table>
+
+                    <tr>
+
+                        <th>Model</th>
+
+                        <th>Key Metric</th>
+
+                        <th>Score</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>K-Means Clustering</td>
+
+                        <td>Silhouette Score</td>
+
+                        <td>0.3136</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>FP-Growth</td>
+
+                        <td>Rule Confidence</td>
+
+                        <td>0.80 - 1.00</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div id = "resultsImages">
+
+                <img src = "../images/Customer_segmentation_project/elbow_method.png" alt = "Elbow Method Graph">
+
+                <img src = "../images/Customer_segmentation_project/pca_visualization.png" alt = "Clustering PCA visualization">
+
+                <figure>
+
+                <figcaption>Top Association Rules by Group</figcaption>
+
+                <img src="../images/Customer_segmentation_project/top_association_rules.png" alt = "Top association rules">
+
+                </figure>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id = highlightsNextSteps>
+
+            <div id = "highlights">
+
+                <h1>Highlights</h1>
+
+                <ul>
+                    <li>
+                        Successfully applied unsupervised learning to customer data for the first time
+                    </li>
+
+                    <li>
+                        Built a robust pipeline with vectorization, scaling, and clustering in PySpark
+                    </li>
+
+                    <li>
+                        Created three practical recommendation strategies tailored to unique cluster behaviors
+                    </li>
+
+                    <li>
+                        Used PCA plots to visualize and validate clustering results
+                    </li>
+
+                    <li>
+                        Learned FP-Growth and association rule mining from scratch
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id = "nextSteps">
+
+                <h1>Next Steps</h1>
+
+                <ul>
+
+                    <li>
+                        Build an interactive dashboard where new customers can be assigned to clusters and receive tailored recommendations
+                    </li>
+
+                    <li>
+                        Add geolocation and seasonal features for deeper insight
+                    </li>
+
+                    <li>
+                        Automate ingestion of new customer data for real-time clustering
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </body>
+
+</html>

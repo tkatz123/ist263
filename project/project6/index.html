@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Tyler Katz Portfolio - Home</title>
+
+        <link rel = "stylesheet" href = "index-css.css">
+
+        <script src = "index-scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class = "title">
+
+                <p>Tyler Katz's Portfolio</p>
+
+            </div>
+
+            <div id = "hamburger">
+                <img src = "../images/icons/menu_icon.png" alt = "menu icon" id = "menuIcon">
+            </div>
+
+            <nav>
+                <a href = "#aboutMe">About Me</a>
+                <a href = "#skillsHeader">Technical Skills</a>
+                <a href = "#projHeader">Projects</a>
+                <a href = "#contactHeader">Contact Me</a>
+            </nav>
+
+        </header>
+
+        <section id = "introduction">
+
+            <img src = "../images/TylerKatz.png" alt = "headshot" id = "headshot">
+
+            <p id = "starterInfo">
+                <span id = "fullName">Tyler Katz</span> <br> <br>
+                B.S. Applied Data Analytics <br>
+                Syracuse University School of Information Studies <br> <br> <button type = "button" id = "projButton">View my work</button> 
+                <a href="../additional_files/Tyler_Katz_Resume.pdf"
+                download="Tyler_Katz_Resume.pdf"
+                class="btn" id = "resumeButton">
+                    Download my résumé
+                </a>
+            </p>
+
+
+        </section>
+
+        <section id = "aboutMe">
+
+            <h1>About Me</h1>
+
+            <p>Hi, I’m Tyler Katz</p>
+
+            <p>
+                I’m a current senior at Syracuse University completing a B.S. in Applied Data Analytics, with plans to begin a M.S. in Human-Centered Artificial Intelligence in Fall 2026. I’m passionate about applying data science, machine learning, and AI to solve real-world problems in ways that are both impactful and ethical.
+            </p>
+
+            <p>
+                For the past eight months, I’ve worked as an undergraduate research assistant in data analytics, gaining hands-on experience with data preprocessing, statistical modeling, and translating technical insights for non-technical audiences. This role has strengthened my foundation and deepened my commitment to building solutions that prioritize usability and human impact.
+            </p>
+
+            <p>
+                I also currently serve as Engineering Lead for Cuse AI, a first-of-its-kind, student-run organization dedicated to educating students across disciplines on emerging AI technologies. In this role, I guide project teams from scoping to deployment—providing technical direction, architecture and tooling recommendations, code reviews, and hands-on support for both technical and non-technical members.
+            </p>
+
+        </section>
+
+        <h1 id = "skillsHeader">Technical Skills</h1>
+
+        <section id = "skills">
+
+            <div id = "skillsRow1">
+                
+
+                <div id = "SkillsLanguages">
+                    <h3>Languages</h3>
+
+                    <p>
+                        <span class = "skillItem">Python</span> <span class = "skillItem">R</span> <span class = "skillItem">SQL</span> <span class = "skillItem">HTML</span>
+                    </p>
+
+                </div>
+
+                <div id = "skillsML">
+
+                    <h3>Machine Learning</h3>
+
+                    <p>
+                        <span class = "skillItem">pandas</span> <span class = "skillItem">numpy</span> <span class = "skillItem">scikit-learn</span> <span class = "skillItem">XGboost</span> <span class = "skillItem">PySpark MLlib</span> <span class = "skillItem">Streamlit</span> <span class = "skillItem">Shiny</span>
+                    </p>
+
+                </div>
+            </div>
+
+            <div id = "skillsRow2">
+                <div id = "skillsDB">
+
+                    <h3>Databases</h3>
+
+                    <p>
+                        <span class = "skillItem">RDBMS</span> <span class = "skillItem">MongoDB</span> <span class = "skillItem">Cassandra</span> <span class = "skillItem">Redis</span> <span class = "skillItem">Neo4J</span> <span class = "skillItem">Kafka</span> <span class = "skillItem">ElasticSearch/Kibana</span>
+                    </p>
+                </div>
+
+                <div id = "skillsBigData">
+
+                    <h3>Big Data</h3>
+
+                    <p>
+                        <span class = "skillItem">Spark</span> <span class = "skillItem">Drill</span> <span class = "skillItem">Hadoop</span> <span class = "skillItem">Hive</span> <span class = "skillItem">Yarn</span>
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <div id = "outerProj">
+
+        <h1 id = "projHeader">Projects</h1>
+
+            <section id = "projects">
+
+                <div id = "projRow1">
+
+                    <a href = "nlpproj.html" id = "nlpProjLink">
+
+                        <div id = "nlpProj">
+                            <h3>Fake News Detection Using NLP</h3>
+
+                            <p>
+                                An end-to-end pipeline to classify news articles as real or fake using logistic regression, random forest, and a meta-classifier. Integrated sentiment analysis and TF-IDF, tuned with GridSearchCV, and deployed the model in a Streamlit app with real-time prediction and confidence scoring. Achieved 95.5% accuracy on test data.
+                            </p>
+
+                            <h4>Skills used</h4>
+
+                            <p>
+                                <span class = "projSkill">Python</span> <span class = "projSkill">scikit-learn</span> <span class = "projSkill">Streamlit</span>
+                            </p>
+
+                            <p>Click to learn more</p>
+
+                        </div>
+                    </a>
+
+                    <a href = "xgboostproj.html"  id = "xgboostProjLink">
+
+                        <div id = "xgboostProj">
+                            <h3>Sales Forceasting Using XGboost</h3>
+
+                            <p>
+                                Built an end-to-end forecasting pipeline in R to predict sales for 1,115 retail stores using time-series data. Engineered lag/rolling variables, tuned XGBoost with time-aware CV, and reduced RMSE from 1433.87 to 663.47. Deployed results in an interactive Shiny app for store-by-store forecasting.
+                            </p>
+
+                            <h4>Skills used</h4>
+
+                            <p>
+                                <span class = "projSkill">R</span> <span class = "projSkill">XGboost</span> <span class = "projSkill">Shiny</span>
+                            </p>
+
+                            <p>Click to learn more</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div id = "projRow2">
+                    <a href = "sparkproj.html"  id = "pysparkProjLink">
+
+                        <div id = "pysparkProj">
+                            <h3>Customer Segmentation Using K-Means Clustering via PySpark</h3>
+
+                            <p>
+                                Segmented customers using K-Means clustering and behavioral data to uncover trends in retail purchasing. Built a hybrid recommendation system combining FP-Growth, cluster preferences, and personal purchase history. Achieved a silhouette score of 0.3136 and built three actionable marketing strategies.
+                            </p>
+
+                            <h4>Skills used</h4>
+
+                            <p>
+                                <span class = "projSkill">Python</span> <span class = "projSkill">PySpark</span> 
+                            </p>
+
+                            <p>Click to learn more</p>
+
+                        </div>
+                    </a>
+
+                    <a href = "dbproj.html"  id = "dbProjLink">
+
+                        <div id = "dbProj">
+                            <h3>Restaurant SQL Database</h3>
+
+                            <p>
+                                Built a full SQL database from CSV files using SQLite and Python. Created conceptual and physical ERDs, wrote table creation/drop scripts, and generated insert statements programmatically. Developed themed SQL query files analyzing customer behavior, revenue, meal trends, and more using joins, CTEs, and views.
+                            </p>
+
+                            <h4>Skills used</h4>
+
+                            <p>
+                                <span class = "projSkill">SQL</span> <span class = "projSkill">RDBMS</span>
+                            </p>
+
+                            <p>Click to learn more</p>
+
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <h1 id = "contactHeader">Contact Me</h1>
+
+        <section id = "contactMe">
+            
+                <div id = "contactInfo">
+
+                    <h3>Email</h3>
+                    <a href = "mailto:tmkatz@syr.edu">tmkatz@syr.edu</a>
+
+                    <h3>Location</h3>
+                    <p>Syracuse, New York</p>
+
+                    <h3>Languages</h3>
+                    <p>English</p>
+
+                </div>
+
+                <div id = "form">
+
+                    <form action = "https://formspree.io/f/mdkpzpev" method = "post">
+
+                        <label for = "name">Your full name: </label><br>
+                        <input type = "text" id = "name" name = "name">
+
+                        <br><br>
+
+                        <label for = "email">Your email: </label><br>
+                        <input type = "text" id = "email" name = "email">
+
+                        <br><br>
+
+                        <label for = "message">Message: </label><br>
+                        <textarea id = "message" name = "message" rows = "6"></textarea>
+
+                        <br><br>
+
+                        <input type = "submit" value = "Send Form" id = "submitButton">
+
+                    </form>
+
+                </div>
+
+        </section>
+
+    </body>
+
+</html>
