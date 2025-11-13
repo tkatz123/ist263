@@ -265,7 +265,7 @@ nav a:hover {
 .projSkill:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 10px #284b63;
-    border: #284b63 solid 2px;
+    border: #284b63 solid 1px;
     cursor: pointer;
 }
 
