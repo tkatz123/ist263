@@ -1,6 +1,7 @@
 body {
     background-color: #d9d9d9;
     margin: 0;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 }
 
 h1 {
@@ -158,6 +159,11 @@ nav a:hover {
     scroll-margin-top: 5em;
 }
 
+#aboutMeContent{
+    width: 75%;
+    margin: 0 auto;
+}
+
 /* Skills Section Styles */
 #skillsHeader{
     text-align: center;
@@ -262,7 +268,42 @@ nav a:hover {
 #nlpProjLink, #xgboostProjLink, #pysparkProjLink, #dbProjLink {
     flex: 1 1 calc(50% - 1em);
     min-width: 300px;
+    min-height: 425px;
     text-decoration: none;
+}
+
+#projects p, #projects h2, #projects h3 {
+    color: #284b63
+}
+
+#projects p.callAction{
+    display: none;
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.25em 0.25em;
+    padding: 0.4em 0.8em;
+    background-color: #284b63;
+    color: #d9d9d9;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#projects p.callAction:hover{
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 0 10px #284b63;
+    border: #284b63 solid 1px;
+    cursor: pointer;
+}
+
+#nlpProj:hover .callAction,
+#xgboostProj:hover .callAction,
+#pysparkProj:hover .callAction,
+#dbProj:hover .callAction {
+    display: inline-block;
 }
 
 #nlpProj, #xgboostProj, #pysparkProj, #dbProj{
@@ -280,14 +321,14 @@ nav a:hover {
     position: relative;
 }
 
+#pysparkProj{
+    padding: 0.30em 1em 1em 1em;
+}
+
 #nlpProj:hover, #xgboostProj:hover, #pysparkProj:hover, #dbProj:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 10px #ffffff;
     border: #ffffff solid 1px;
-}
-
-#projects p, #projects h2, #projects h3 {
-    color: #284b63
 }
 
 .projSkill {
@@ -397,7 +438,7 @@ nav a:hover {
 .clickIcon{
     display: none;
     position: absolute;
-    bottom: 1em;
+    bottom: 3.5em;
     left: 45%;
     transform: translateX(-50%);
 }
