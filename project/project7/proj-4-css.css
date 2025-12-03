@@ -162,7 +162,7 @@ nav a:hover {
     border: #284b63 solid 1px;
 }
 
-#toolsUsed h3{
+#toolsUsed h2{
     color: #284b63;
 }
 
@@ -316,7 +316,7 @@ nav a:hover {
     margin: 3em 0em 0em 0em;
 }
 
-#footer h3{
+#footer h2{
     color: #d9d9d9;
     font-size: 3em;
     text-align: center;
@@ -388,7 +388,7 @@ nav a:hover {
     }
 
     header .title {
-        font-size: 2em;
+        font-size: 0.70em;
         margin: 0.5em 1em;
     }
 

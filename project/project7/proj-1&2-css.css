@@ -351,7 +351,7 @@ nav a:hover {
     padding: 0.5em 0.5em 1.5em 0.5em;
 }
 
-#footer h3{
+#footer h2{
     color: #d9d9d9;
     font-size: 3em;
     text-align: center;
@@ -431,7 +431,7 @@ nav a:hover {
     }
 
     header .title {
-        font-size: 2em;
+        font-size: 0.70em;
         margin: 0.5em 1em;
     }
 

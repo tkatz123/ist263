@@ -311,6 +311,7 @@ nav a:hover {
     text-align: center;
     color: #353535;
     margin: -0.5em 0em 1em 0em;
+    scroll-margin-top: 2em;
 }
 
 #contactMe{
@@ -377,12 +378,6 @@ nav a:hover {
     min-height: 120px;
 }
 
-.contactItem{
-    font-size: 1.17em;
-    font-weight: bold;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
 
 /* Keyframe animation for floating effect */
 @keyframes float {
@@ -498,7 +493,7 @@ nav a:hover {
     }
 
     header .title {
-        font-size: 1.5em;
+        font-size: 0.70em;
         margin: 0.5em 1em;
     }
 
