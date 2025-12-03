@@ -53,9 +53,13 @@ header.scrolled {
 }
 
 header .title {
-    font-size: 2em;
+    font-size: 0.70em;
     color: #d9d9d9;
-    margin: -0.25em 1em;
+    margin: -0.25em 2em;
+}
+
+header .title h1 {
+    font-weight: 400;
 }
 
 nav {
@@ -192,6 +196,10 @@ nav a:hover {
     font-size: 2em;
 }
 
+#skills h2{
+    font-size: 2em;
+}
+
 .skillItem {
     display: inline-block;
     margin: 0.25em 0.25em;
@@ -269,7 +277,7 @@ nav a:hover {
     border: #ffffff solid 1px;
 }
 
-#projects p, #projects h3, #projects h4 {
+#projects p, #projects h2, #projects h3 {
     color: #284b63
 }
 
@@ -414,10 +422,10 @@ nav a:hover {
 
 #footer{
     background-color: #3c6e71;
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.5em 0.5em 1.5em 0.5em;
 }
 
-#footer h3{
+#footer h2{
     color: #d9d9d9;
     font-size: 3em;
     text-align: center;
