@@ -216,6 +216,14 @@ nav a:hover {
     margin: 0 auto;
 }
 
+#methodology ol > li{
+    margin-bottom: 1em;
+}
+
+#methodology ol > li:last-child{
+    margin-bottom: 0;
+}
+
 /*Results Section*/
 
 #results{
