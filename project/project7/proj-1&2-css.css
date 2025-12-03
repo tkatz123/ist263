@@ -299,6 +299,14 @@ nav a:hover {
     font-size: 1em;
 }
 
+#highlights ul > li, #nextSteps ul > li{
+    margin-bottom: 1em;
+}
+
+#highlights ul > li:last-child, #nextSteps ul > li:last-child{
+    margin-bottom: 0;
+}
+
 /*Streamlit App Section*/
 
 #app{
