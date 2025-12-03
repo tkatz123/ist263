@@ -8,6 +8,11 @@ h1 {
     scroll-margin-top: 5em;
 }
 
+h2.h1-style {
+    font-size: 3em;
+    scroll-margin-top: 5em;
+}
+
 section {
     scroll-margin-top: 5em;
 }
@@ -103,7 +108,7 @@ nav a:hover {
     padding: 2em;
 }
 
-#toolsUsed h1{
+#toolsUsed h1, #toolsUsed h2.h1-style{
     text-align: center;
     color: #d9d9d9;
 }
@@ -201,7 +206,7 @@ nav a:hover {
     color: #d9d9d9
 }
 
-#methodology h1{
+#methodology h1, #methodology h2.h1-style{
     text-align: center;
 }
 
@@ -217,7 +222,7 @@ nav a:hover {
     padding: 2em;
 }
 
-#results h1{
+#results h1, #results h2.h1-style{
     text-align: center;
     color: #d9d9d9;
 }
@@ -290,7 +295,7 @@ nav a:hover {
     border: #3c6e71 solid 2px;
 }
 
-#highlights h1, #nextSteps h1{
+#highlights h1, #nextSteps h1, #highlights h2.h1-style, #nextSteps h2.h1-style{
     text-align: center;
 }
 
@@ -349,7 +354,7 @@ nav a:hover {
 /* Mobile Styles */
 @media (max-width: 1024px) {
     /* Scroll offset for mobile */
-    h1 {
+    h1, h2.h1-style {
         scroll-margin-top: 8em;
     }
 
