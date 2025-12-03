@@ -139,6 +139,10 @@ nav a:hover {
     border: #d9d9d9 solid 1px;
 }
 
+#introduction h1{
+    display: none;
+}
+
 /*About Me Section Styles*/
 #aboutMe{
     text-align: center;
@@ -371,6 +375,13 @@ nav a:hover {
 #form textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.contactItem{
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /* Keyframe animation for floating effect */
