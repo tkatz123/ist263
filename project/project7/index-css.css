@@ -626,6 +626,22 @@ nav a:hover {
         padding-bottom: 4em;
     }
 
+    /* Hide clickIcon on mobile */
+    #nlpProj .clickIcon,
+    #xgboostProj .clickIcon,
+    #pysparkProj .clickIcon,
+    #dbProj .clickIcon {
+        display: none !important;
+    }
+
+    /* Always show callAction on mobile */
+    #nlpProj .callAction,
+    #xgboostProj .callAction,
+    #pysparkProj .callAction,
+    #dbProj .callAction {
+        display: inline-block !important;
+    }
+
     /* Contact Section */
     #contactMe {
         flex-direction: column;
