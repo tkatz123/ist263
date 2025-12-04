@@ -270,6 +270,14 @@ nav a:hover {
     color: #284b63;
 }
 
+#resultsBullets ul > li{
+    margin-bottom: 1em;
+}
+
+#highlights ul > li:last-child, #nextSteps ul > li:last-child{
+    margin-bottom: 0;
+}
+
 #resultsImages{
     display: flex;
     flex-wrap: wrap;
