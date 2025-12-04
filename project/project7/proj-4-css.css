@@ -102,11 +102,17 @@ nav a:hover {
     margin: 0em 0em 1em 0em;
 }
 
+#titleContent{
+    width: 75%;
+    margin: 0 auto;
+}
+
 /* Tools Used Section */
 
 #toolsUsed{
     background-color: #284b63;
     padding: 2em;
+    scroll-margin-top: 3em;
 }
 
 #toolsUsed h1, #toolsUsed h2.h1-style{
@@ -234,6 +240,7 @@ nav a:hover {
     background-color: #284b63;
     padding: 2em;
     margin: 0em 0em 3em 0em;
+    scroll-margin-top: 3em;
 }
 
 #results h1, #results h2.h1-style{
@@ -317,6 +324,14 @@ nav a:hover {
     font-size: 1em;
 }
 
+#highlights ul > li, #nextSteps ul > li{
+    margin-bottom: 1em;
+}
+
+#highlights ul > li:last-child, #nextSteps ul > li:last-child{
+    margin-bottom: 0;
+}
+
 /*Footer Section */
 
 #footerHeader{
@@ -380,19 +395,19 @@ nav a:hover {
     }
 
     #toolsUsed {
-        scroll-margin-top: 35em;
+        scroll-margin-top: 30em;
     }
 
     #datasetMethod {
-        scroll-margin-top: 36em;
+        scroll-margin-top: 34em;
     }
 
     #results {
-        scroll-margin-top: 35em;
+        scroll-margin-top: 30em;
     }
 
     #highlightsNextSteps {
-        scroll-margin-top: 36em;
+        scroll-margin-top: 34em;
     }
 
     /* Header */

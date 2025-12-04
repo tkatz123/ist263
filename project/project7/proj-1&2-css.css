@@ -103,17 +103,24 @@ nav a:hover {
     margin: 0em 0em 1em 0em;
 }
 
+#titleContent{
+    width: 75%;
+    margin: 0 auto;
+}
+
 /* Tools Used Section */
 
 #toolsUsed{
     background-color: #284b63;
     padding: 2em;
+    scroll-margin-top: 3em;
 }
 
 #toolsUsed h1, #toolsUsed h2.h1-style{
     text-align: center;
     color: #d9d9d9;
 }
+
 
 #toolsFlex{
     display: flex;
@@ -230,6 +237,7 @@ nav a:hover {
 #results{
     background-color: #284b63;
     padding: 2em;
+    scroll-margin-top: 3em;
 }
 
 #results h1, #results h2.h1-style{
@@ -322,6 +330,7 @@ nav a:hover {
 #app{
     background-color: #284b63;
     padding: 2em 2em 4em 2em;
+    scroll-margin-top: 3em;
 }
 
 #app h1, #app h2.h1-style, #app p{
@@ -424,27 +433,27 @@ nav a:hover {
     }
 
     #toolsUsed {
-        scroll-margin-top: 45em;
+        scroll-margin-top: 40em;
     }
 
     #datasetMethod {
-        scroll-margin-top: 46em;
+        scroll-margin-top: 44em;
     }
 
     #results {
-        scroll-margin-top: 45em;
+        scroll-margin-top: 39em;
     }
 
     #highlightsNextSteps {
-        scroll-margin-top: 46em;
+        scroll-margin-top: 44em;
     }
 
     #app {
-        scroll-margin-top: 45em;
+        scroll-margin-top: 40em;
     }
 
     #demoVid {
-        scroll-margin-top: 45em;
+        scroll-margin-top: 40em;
     }
 
     /* Header */
